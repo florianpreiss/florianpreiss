@@ -102,8 +102,3 @@ My experience spans technical architecture, stakeholder alignment, and presentin
 
 Sport shapes how I think: long-term consistency, structured training, iterative improvement.  
 The same principles guide how I build ML systems.
-
-| | |
-|---|---|
-| ![Team Coding](images/team-coding.jpg) | ![Hyrox](images/hyrox.JPG) |
-| *Collaborating with the team* | *Competing in Hyrox* |
