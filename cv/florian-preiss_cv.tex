@@ -1,0 +1,313 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.5 cm,
+    bottom=1.5 cm,
+    left=1.5 cm,
+    right=1.5 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{230, 105, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={CV Florian Preiss},
+    pdfauthor={Florian Preiss},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\makeatletter
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+    \newcommand{\AND}{\unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces}
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \fontsize{30 pt}{30 pt}\selectfont
+        \textbf{Florian Preiss}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:florianpreiss@outlook.de}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}florianpreiss@outlook.de}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+49 (0)15750732476}{{\footnotesize\faPhone*}\hspace*{0.13cm}+49 (0)15750732476}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/florianpreiss/}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}florianpreiss}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Munich, Germany}%
+    \end{header}
+
+    \vspace{0.3 cm}
+
+    \section{Summary}
+
+    \begin{onecolentry}
+        Applied AI Engineer with +2 years of experience building cloud-native ML \& GenAI systems. Specialized in LLM-based applications including multi-agent systems, RAG pipelines and aspect-based sentiment analyses on AWS. Proven experience owning projects end-to-end and working with stakeholders to deliver solutions that support operational and strategic decisions.
+    \end{onecolentry}
+
+    \section{Experience}
+
+    \begin{twocolentry}{\textit{08/2024 -- Present}}
+        \textbf{Audi Business Innovation GmbH} -- Munich, Germany
+
+        \textit{Data Scientist}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Built production pipelines for large-scale analysis of user feedback from social media, blogs and forums using LLM-based aspect-based sentiment analysis on AWS.
+            \item Collaborated with cross-functional teams to develop a production-grade multi-agent system on AWS using LangGraph and MCP that enables clients to chat with their data and uncover insights across internal documents.
+            \item Designed and implemented document preprocessing and retrieval workflows, including chunking, metadata handling, and agent routing for RAG and text-to-SQL use cases.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{03/2024 -- 06/2024}}
+        \textbf{Audi Business Innovation GmbH} -- Munich, Germany
+
+        \textit{Master Thesis -- AI Engineering (GPA: 4.0/4.0)}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed a prototype for a GenAI assistant using RAG to answer questions over internal document collections.
+            \item Integrated fragmented vehicle, market, and user feedback data into a single semantic access layer for decision support.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{09/2023 -- 02/2024}}
+        \textbf{United Nations -- Department of Operational Support} -- New York, USA
+
+        \textit{Analytics \& Business Intelligence -- Carlo Schmid Fellow}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed data and process automation workflows using Power Automate and Power BI to support operational teams.
+            \item Built dashboards and reports used by senior stakeholders to monitor processes and performance.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{10/2022 -- 06/2023}}
+        \textbf{Nova SBE Data Science Knowledge Center} -- Lisbon, Portugal
+
+        \textit{Lead Data Scientist (Student Project)}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Led a team of three students on a data science project for an asset management client in the banking sector, coordinating the project from scoping to handover.
+            \item Trained and validated NLP classification models for financial news articles and delivered a prototype aligned with business decision workflows.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{04/2022 -- 08/2022}}
+        \textbf{Audi Business Innovation GmbH} -- Munich, Germany
+
+        \textit{Data Analytics Intern}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed Tableau dashboards used for operational and management reporting.
+            \item Supported teams in integrating analytics outputs into daily workflows.
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{05/2021 -- 08/2021}}
+        \textbf{Omniga GmbH \& Co. KG} -- Regensburg, Germany
+
+        \textit{Bachelor Thesis -- Machine Learning (GPA: 4.0/4.0)}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Developed a recommender system for customer retention optimization.
+            \item Trained and evaluated supervised ML models (Random Forest, XGBoost) on a customer dataset with 4M+ records.
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Education}
+
+    \begin{twocolentry}{\textit{09/2022 -- 06/2024}}
+        \textbf{Nova School of Business and Economics} -- Lisbon, Portugal
+
+        \textit{M.Sc. in Business Analytics (GPA: 4.0/4.0 -- Top 2\% in cohort)}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Relevant coursework: Machine Learning, Network Analytics, Advanced Programming, Data Curation
+        \end{highlights}
+    \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+    \begin{twocolentry}{\textit{10/2017 -- 07/2021}}
+        \textbf{Regensburg University of Applied Sciences} -- Regensburg, Germany
+
+        \textit{B.A. International Relations and Management (GPA: 3.7/4.0)}
+    \end{twocolentry}
+
+    \vspace{0.10 cm}
+    \begin{onecolentry}
+        \begin{highlights}
+            \item Relevant coursework: Machine Learning with R, Applied Data Analytics, Statistics
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Skills}
+
+        \begin{onecolentry}
+        \begin{highlights}
+            \item \textbf{GenAI \& LLMs:} AWS (Amazon Bedrock, Sagemaker, Agentcore) · Open Source (PyTorch, Tensorflow, Scikit-learn, Ollama, Hugging Face) · Multi-Agent Systems (StrandsAgents, LangChain, LangGraph, MCP) · Fine-tuning (LoRA/QLoRA) · RAG Pipelines (chunking, retrieval, re-ranking) · Semantic search · Context/Prompt Engineering
+            \item \textbf{Cloud \& Infrastructure:} AWS · Terraform · Git/GitHub
+            \item \textbf{Programming:} Python · SQL · R
+            \item \textbf{Data \& Interfaces:} Tableau · Power BI · Streamlit
+            \item \textbf{Collaboration \& Delivery:} Agile methods (Scrum, Kanban, Scrumban, SAFe) · Jira · Confluence · Miro · Figma
+            \item \textbf{Languages:} German (Native) · English (Full Professional) · Spanish (Professional Working)
+        \end{highlights}
+    \end{onecolentry}
+
+    \section{Awards \& Scholarships}
+
+\begin{onecolentry}
+\begin{highlights}
+    \item \textbf{Carlo Schmid Fellowship} (2023--2024) -- Merit-based fellowship (7\% acceptance rate) to gain international professional experience
+    \item \textbf{DAAD Scholarship} (2023--2024) -- Merit-based fellowship of the German Academic Exchange Service (DAAD) and German Federal Ministry of Education and Research (BMBF) for international professional experience
+    \item \textbf{EXIST Scholarship for Startup Founders} (2021--2022) -- Federal funding from the German Federal Ministry for Economic Affairs and Energy (BMWE) to co-found and develop a startup from concept to prototype
+\end{highlights}
+\end{onecolentry}
+
+\end{document}
