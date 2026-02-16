@@ -109,7 +109,7 @@ The same principles guide how I build ML systems.
     <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9em;">Collaborating with the team</p>
   </div>
   <div style="flex: 1; min-width: 300px; max-width: 400px;">
-    <img src="images/hyrox.jpg" alt="Hyrox athlete" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <img src="images/hyrox.JPG" alt="Hyrox athlete" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9em;">Competing in Hyrox</p>
   </div>
 </div>
