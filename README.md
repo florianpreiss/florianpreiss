@@ -103,13 +103,7 @@ My experience spans technical architecture, stakeholder alignment, and presentin
 Sport shapes how I think: long-term consistency, structured training, iterative improvement.  
 The same principles guide how I build ML systems.
 
-<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
-  <div style="flex: 1; min-width: 300px; max-width: 400px;">
-    <img src="images/team-coding.jpg" alt="Coding in a team" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9em;">Collaborating with the team</p>
-  </div>
-  <div style="flex: 1; min-width: 300px; max-width: 400px;">
-    <img src="images/hyrox.JPG" alt="Hyrox athlete" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9em;">Competing in Hyrox</p>
-  </div>
-</div>
+| | |
+|---|---|
+| ![Team Coding](images/team-coding.jpg) | ![Hyrox](images/hyrox.JPG) |
+| *Collaborating with the team* | *Competing in Hyrox* |
