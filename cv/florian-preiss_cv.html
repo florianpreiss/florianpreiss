@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian Preiss - CV</title>
+    <style>
+        :root {
+            --primary-color: #e66900;
+            --text-color: #333;
+            --bg-color: #ffffff;
+            --border-color: #ddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            padding: 40px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .entry {
+            margin-bottom: 20px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .entry-title {
+            font-weight: 700;
+            font-size: 1.05em;
+        }
+        
+        .entry-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .entry-date {
+            font-style: italic;
+            color: #666;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        ul li {
+            margin-bottom: 6px;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #cc5e00;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .entry-date {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Florian Preiss</h1>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:florianpreiss@outlook.de">florianpreiss@outlook.de</a></span>
+                <span>📞 <a href="tel:+4915750732476">+49 (0)157 5073 2476</a></span>
+                <span>💼 <a href="https://www.linkedin.com/in/florianpreiss/" target="_blank">linkedin.com/in/florianpreiss</a></span>
+                <span>📍 Munich, Germany</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Summary</h2>
+            <p class="summary">
+                Applied AI Engineer with +2 years of experience building cloud-native ML & GenAI systems. Specialized in LLM-based applications including multi-agent systems, RAG pipelines and aspect-based sentiment analyses on AWS. Proven experience owning projects end-to-end and working with stakeholders to deliver solutions that support operational and strategic decisions.
+            </p>
+            <a href="florian-preiss_cv.pdf" class="download-btn" download>📄 Download PDF Version</a>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Audi Business Innovation GmbH</div>
+                        <div class="entry-subtitle">Data Scientist</div>
+                    </div>
+                    <div class="entry-date">08/2024 – Present</div>
+                </div>
+                <ul>
+                    <li>Built production pipelines for large-scale analysis of user feedback from social media, blogs and forums using LLM-based aspect-based sentiment analysis on AWS.</li>
+                    <li>Collaborated with cross-functional teams to develop a production-grade multi-agent system on AWS using LangGraph and MCP that enables clients to chat with their data and uncover insights across internal documents.</li>
+                    <li>Designed and implemented document preprocessing and retrieval workflows, including chunking, metadata handling, and agent routing for RAG and text-to-SQL use cases.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Audi Business Innovation GmbH</div>
+                        <div class="entry-subtitle">Master Thesis – AI Engineering (GPA: 4.0/4.0)</div>
+                    </div>
+                    <div class="entry-date">03/2024 – 06/2024</div>
+                </div>
+                <ul>
+                    <li>Developed a prototype for a GenAI assistant using RAG to answer questions over internal document collections.</li>
+                    <li>Integrated fragmented vehicle, market, and user feedback data into a single semantic access layer for decision support.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">United Nations – Department of Operational Support</div>
+                        <div class="entry-subtitle">Analytics & Business Intelligence – Carlo Schmid Fellow</div>
+                    </div>
+                    <div class="entry-date">09/2023 – 02/2024</div>
+                </div>
+                <ul>
+                    <li>Developed data and process automation workflows using Power Automate and Power BI to support operational teams.</li>
+                    <li>Built dashboards and reports used by senior stakeholders to monitor processes and performance.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Nova SBE Data Science Knowledge Center</div>
+                        <div class="entry-subtitle">Lead Data Scientist (Student Project)</div>
+                    </div>
+                    <div class="entry-date">10/2022 – 06/2023</div>
+                </div>
+                <ul>
+                    <li>Led a team of three students on a data science project for an asset management client in the banking sector, coordinating the project from scoping to handover.</li>
+                    <li>Trained and validated NLP classification models for financial news articles and delivered a prototype aligned with business decision workflows.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Audi Business Innovation GmbH</div>
+                        <div class="entry-subtitle">Data Analytics Intern</div>
+                    </div>
+                    <div class="entry-date">04/2022 – 08/2022</div>
+                </div>
+                <ul>
+                    <li>Developed Tableau dashboards used for operational and management reporting.</li>
+                    <li>Supported teams in integrating analytics outputs into daily workflows.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Omniga GmbH & Co. KG</div>
+                        <div class="entry-subtitle">Bachelor Thesis – Machine Learning (GPA: 4.0/4.0)</div>
+                    </div>
+                    <div class="entry-date">05/2021 – 08/2021</div>
+                </div>
+                <ul>
+                    <li>Developed a recommender system for customer retention optimization.</li>
+                    <li>Trained and evaluated supervised ML models (Random Forest, XGBoost) on a customer dataset with 4M+ records.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Nova School of Business and Economics</div>
+                        <div class="entry-subtitle">M.Sc. in Business Analytics (GPA: 4.0/4.0 – Top 2% in cohort)</div>
+                    </div>
+                    <div class="entry-date">09/2022 – 06/2024</div>
+                </div>
+                <ul>
+                    <li>Relevant coursework: Machine Learning, Network Analytics, Advanced Programming, Data Curation</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Regensburg University of Applied Sciences</div>
+                        <div class="entry-subtitle">B.A. International Relations and Management (GPA: 3.7/4.0)</div>
+                    </div>
+                    <div class="entry-date">10/2017 – 07/2021</div>
+                </div>
+                <ul>
+                    <li>Relevant coursework: Machine Learning with R, Applied Data Analytics, Statistics</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>GenAI & LLMs:</strong> AWS (Amazon Bedrock, Sagemaker, Agentcore) · Open Source (PyTorch, Tensorflow, Scikit-learn, Ollama, Hugging Face) · Multi-Agent Systems (StrandsAgents, LangChain, LangGraph, MCP) · Fine-tuning (LoRA/QLoRA) · RAG Pipelines (chunking, retrieval, re-ranking) · Semantic search · Context/Prompt Engineering</li>
+                <li><strong>Cloud & Infrastructure:</strong> AWS · Terraform · Git/GitHub</li>
+                <li><strong>Programming:</strong> Python · SQL · R</li>
+                <li><strong>Data & Interfaces:</strong> Tableau · Power BI · Streamlit</li>
+                <li><strong>Collaboration & Delivery:</strong> Agile methods (Scrum, Kanban, Scrumban, SAFe) · Jira · Confluence · Miro · Figma</li>
+                <li><strong>Languages:</strong> German (Native) · English (Full Professional) · Spanish (Professional Working)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Awards & Scholarships</h2>
+            <ul>
+                <li><strong>Carlo Schmid Fellowship</strong> (2023–2024) – Merit-based fellowship (7% acceptance rate) to gain international professional experience</li>
+                <li><strong>DAAD Scholarship</strong> (2023–2024) – Merit-based fellowship of the German Academic Exchange Service (DAAD) and German Federal Ministry of Education and Research (BMBF) for international professional experience</li>
+                <li><strong>EXIST Scholarship for Startup Founders</strong> (2021–2022) – Federal funding from the German Federal Ministry for Economic Affairs and Energy (BMWE) to co-found and develop a startup from concept to prototype</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

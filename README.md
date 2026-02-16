@@ -94,7 +94,8 @@ My experience spans technical architecture, stakeholder alignment, and presentin
 
 ## CV
 
-📄 [CV_Florian_Preiss.pdf](./CV_Florian_Preiss.pdf)
+🌐 **[View CV Online](https://florianpreiss.github.io/florianpreiss/cv/florian-preiss_cv.html)**  
+📄 **[Download CV (PDF)](https://github.com/florianpreiss/florianpreiss/raw/main/cv/florian-preiss_cv.pdf)**
 
 ---
 
