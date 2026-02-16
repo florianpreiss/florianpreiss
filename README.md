@@ -12,9 +12,9 @@ I currently work as a **Data Scientist @ Audi Business Innovation**, where I des
 ## Core Expertise
 
 ### Applied Machine Learning
-- **Supervised:** Regression, Random Forest, Gradient Boosting, SVM  
-- **Recommender Systems:** Collaborative & Content-Based Filtering, Matrix Factorization  
-- **Unsupervised:** Clustering, PCA, t-SNE  
+- Recommender Systems:** Collaborative & Content-Based Filtering, Matrix Factorization
+- Supervised: Regression, Random Forest, Gradient Boosting, SVM  
+- Unsupervised: Clustering, PCA, t-SNE  
 - Feature engineering · Cross-validation · Hyperparameter tuning · Model evaluation  
 
 ### GenAI & Agentic Systems
