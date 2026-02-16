@@ -2,7 +2,7 @@
 
 Hi there, I’m Florian 👋 
 
-I currently work as a **Data Scientist at Audi Business Innovation**, where I design and deploy **ML + LLM-based architectures** (RAG, multi-agent workflows) on **AWS** and take projects from scoping to rollout with stakeholders.
+I currently work as a **Data Scientist @ Audi Business Innovation**, where I design and deploy **ML + LLM-based architectures** (RAG, multi-agent workflows) on **AWS** and take projects from scoping to rollout with stakeholders.
 
 📍 Munich, Germany  
 🏃 Endurance athlete (Hyrox · Triathlon)
